@@ -29,6 +29,7 @@ public class ListController {
         columnChoices.put("coreCompetency", "Skill");
 
         tableChoices.put("employer", JobData.getAllEmployers());
+        //tableChoices.put("all", JobData.getAllJobs());
         tableChoices.put("location", JobData.getAllLocations());
         tableChoices.put("positionType", JobData.getAllPositionTypes());
         tableChoices.put("coreCompetency", JobData.getAllCoreCompetency());
@@ -38,6 +39,7 @@ public class ListController {
     public String list(Model model) {
         model.addAttribute("columns", columnChoices);
         model.addAttribute("tableChoices", tableChoices);
+       // model.addAttribute("jobs", JobData.getAllJobs());
         model.addAttribute("employers", JobData.getAllEmployers());
         model.addAttribute("locations", JobData.getAllLocations());
         model.addAttribute("positions", JobData.getAllPositionTypes());
